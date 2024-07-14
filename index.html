@@ -3,22 +3,60 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>ZiZurz Website Template</title>
+	<title>Eren Yeager Fan Site</title>
 	<link rel="stylesheet" href="css/style.css" type="text/css">
-	<script>
+	<style>
+		.small-img {
+			width: 150px;
+			height: auto;
+		}
+		.logo a {
+			font-size: 2em;
+			color: #fff;
+			text-decoration: none;
+		}
+		#surpriseButton {
+			font-size: 1.5em;
+			padding: 15px 30px;
+			margin-top: 20px;
+			cursor: pointer;
+			border: none;
+			background-color: #ff5733;
+			color: white;
+			border-radius: 10px;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			transition: background-color 0.3s, transform 0.3s;
+		}
+		#surpriseButton:hover {
+			background-color: #c70039;
+			transform: translateY(-3px);
+		}
+		#surpriseButton:active {
+			background-color: #900c3f;
+			transform: translateY(1px);
+		}
+	</style>
+	<script type="text/javascript">
 		function displayMessage() {
-			const userInput = prompt("Enter your favorite quote:");
-			if (userInput) {
-				document.getElementById("user-message").innerText = "Your favorite quote: " + userInput;
+			const userName = prompt("Enter your name:", "Guest");
+			if (userName != null && userName != "") {
+				document.getElementById("userMessage").innerText = `Welcome to my Fan Page, ${userName}! Enjoy exploring the world of Eren Yeager.`;
+			}
+		}
+
+		function surprise() {
+			const favoriteEpisode = prompt("What's your favorite Attack on Titan episode?");
+			if (favoriteEpisode != null && favoriteEpisode != "") {
+				alert(`Awesome! "${favoriteEpisode}" is a great choice!`);
 			}
 		}
 	</script>
 </head>
-<body>
+<body onload="displayMessage()">
 	<div id="header">
 		<div class="section">
 			<div class="logo">
-				<a href="index.html">zizurz</a>
+				<a href="index.html">EREN YEAGER</a>
 			</div>
 			<ul>
 				<li class="selected">
@@ -28,58 +66,21 @@
 					<a href="about.html">about</a>
 				</li>
 				<li>
-					<a href="hairstyle.html">hairstyles</a>
-				</li>
-				<li>
-					<a href="news.html">news</a>
-				</li>
-				<li>
 					<a href="contact.html">contact</a>
 				</li>
 			</ul>
 		</div>
 		<div class="article">
-			<img src="images/eren-yeager.jpg" alt="Eren Yeager">
-			<h1>Welcome, Eren Yeager fans!</h1>
-			<button onclick="displayMessage()">Click me for a surprise!</button>
-			<p id="user-message"></p>
+			<h1>Greatness comes from the heart of a warrior.</h1>
+			<p id="userMessage"></p>
+			<button id="surpriseButton" onclick="surprise()">Click me for a surprise</button>
 		</div>
 	</div>
 	<div id="body">
-		<ul>
-			<li>
-				<a href="hairstyle.html"><img src="images/hairstyle17.jpg" alt=""></a>
-				<b>best hairstylists</b>
-				<p>
-					Our website templates are created with inspiration, checked for quality and originality and meticulously sliced and coded. What’s more, they’re absolutely free!
-				</p>
-			</li>
-			<li>
-				<a href="hairstyle.html"><img src="images/hairstyle18.jpg" alt=""></a>
-				<b>featured hairstyle</b>
-				<p>
-					Our website templates are created with inspiration, checked for quality and originality and meticulously sliced and coded. What’s more, they’re absolutely free!
-				</p>
-			</li>
-			<li>
-				<a href="hairstyle.html"><img src="images/hairstyle19.jpg" alt=""></a>
-				<b>hair care</b>
-				<p>
-					Our website templates are created with inspiration, checked for quality and originality and meticulously sliced and coded. What’s more, they’re absolutely free!
-				</p>
-			</li>
-			<li>
-				<a href="hairstyle.html"><img src="images/hairstyle20.jpg" alt=""></a>
-				<b>we "hair" you</b>
-				<p>
-					Our website templates are created with inspiration, checked for quality and originality and meticulously sliced and coded. What’s more, they’re absolutely free!
-				</p>
-			</li>
-		</ul>
 		<div>
 			<div class="featured">
 				<h2>featured</h2>
-				<img src="images/featured.jpg" alt="">
+				<img src="images/featured.jpg" alt="" class="small-img">
 				<h3>Hair, I just meet you</h3>
 				<p>
 					Our website templates are created with inspiration, checked for quality and originality and meticulously sliced and coded. What’s more, they’re absolutely free! You can do a lot with them. You can modify them. You can use them to design websites for clients, so long as you agree with the Terms of Use.
@@ -93,14 +94,14 @@
 			</div>
 			<div class="section">
 				<div class="article">
-					<h2>hairstyle</h2>
+					<h2>about</h2>
 					<p>
 						This website template has been designed by <a href="http://www.freewebsitetemplates.com/">Free Website Templates</a> for you, for free. You can replace all this text with your own text. You can remove any link to our website from this website template, you're free to use this website template without linking back to us. If you're having problems editing this website template, then don't hesitate to ask for help on the <a href="http://www.freewebsitetemplates.com/forums/">Forums</a>.
 					</p>
 					<a href="#">Mike M.</a>
 				</div>
 				<div class="newsletter">
-					<img src="images/skinhead.png" alt="">
+					<img src="images/skinhead.png" alt="" class="small-img">
 					<p>
 						Are you losing your hair? Let us help you in bringing back your confidence. <span>Call Us at 1800-0000-0000</span>
 					</p>
